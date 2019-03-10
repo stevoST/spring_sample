@@ -11,6 +11,12 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
+    public void setCustomerRepository(CustomerRepository customerRepository) {
+        System.out.println("We are using setter injection");
+        this.customerRepository = customerRepository;
+    }
+
+    //    @Autowired
     private CustomerRepository customerRepository;
 
     @Override
