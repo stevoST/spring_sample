@@ -6,12 +6,11 @@
         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:annotation-config/>
     <context:property-placeholder location="app.properties"/>
 
     <bean name="customerRepository"
-          class="com.pluralsight.repository.HibernateCustomerRepositoryImpl">
-        <property name="dbUsername" value="${dbUsername}"/>
-    </bean>
+          class="com.pluralsight.repository.HibernateCustomerRepositoryImpl" />
 
     <bean name="customerService"
           class="com.pluralsight.service.CustomerServiceImpl"
